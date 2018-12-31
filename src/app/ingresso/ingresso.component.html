@@ -1,0 +1,24 @@
+<h3>
+  Selecione seu ingresso:
+</h3>
+
+<p>
+  <label>Nome: </label> <input type="text" name="nome" [(ngModel)]="ingresso.nome">
+</p>
+
+<p>
+  <label>Quantidade:</label><input type="text" name="quantidade" [(ngModel)]="ingresso.quantidade">
+</p>
+
+<p>
+  <label>Selecione o filme:</label>
+  <select [(ngModel)]="ingresso.filme">
+    <option *ngFor="let filme of filmes">{{ filme }}</option>
+  </select>
+</p>
+
+<p>
+  <label>Filme selecionado: {{ ingresso.filme }}</label>
+</p>
+
+<button type="button" (click)="comprar($event)">Comprar</button>
